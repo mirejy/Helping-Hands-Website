@@ -11,6 +11,10 @@ export const Links = styled.a`
 	font-size: 24px;
 	color: #3A3A3A; 
 	text-decoration: none;
+	&:hover {
+		cursor: pointer;
+		opacity: 0.6;
+	}
 `
 
 export const UlNavigation = styled.ul` 
