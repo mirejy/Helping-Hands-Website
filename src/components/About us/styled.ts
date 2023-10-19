@@ -143,49 +143,36 @@ export const Header = styled(Flex)`
 	width: 100%;  
 `;
 
-export const TitleAboutUs = styled.p`
-	color: #FFF;
+const defaultText = styled.p` 
 	font-family: Inter;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+`
+
+export const TitleAboutUs = styled(defaultText)`
+	color: #FFF;
 	font-size: 64px;
-	font-style: normal;
-	font-weight: 900;
-	line-height: normal;
 `;
 
-export const TitleWhoWeHelp = styled.p`
+export const TitleWhoWeHelp = styled(defaultText)`
 	color: #222;
-	text-align: center;
-	font-family: Inter;
+	text-align: center; 
 	font-size: 46px;
-	font-style: normal;
-	font-weight: 900;
-	line-height: normal;
 `;
 
-export const TitleBlock = styled.p`
+export const TitleBlock = styled(defaultText)`
 	color: #FFF;
 	text-align: center;
-	font-family: Inter;
 	font-size: 35px;
-	font-style: normal;
-	font-weight: 900;
-	line-height: normal;
 `;
 
-export const ContentText = styled.p`
+export const ContentText = styled(defaultText)`
 	color: #FFF;
-	font-family: Inter;
 	font-size: 18px;
-	font-style: normal;
-	font-weight: 900;
-	line-height: normal;
 `;
 
-export const ContentWhoWeHelp = styled.p`
+export const ContentWhoWeHelp = styled(defaultText)`
 	color: #212121;
-font-family: Inter;
-font-size: 20px;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
+	font-size: 20px;
 `;
