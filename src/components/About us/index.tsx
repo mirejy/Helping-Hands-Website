@@ -55,8 +55,7 @@ export default function AboutUs() {
 							</HeaderBlockContainer>
 							<WrapperContent>
 								<ContentText>
-									Jesteśmy młodym i dynamicznie rozwijającym się funduszem charytatywnym,
-									. <br /><br /> Od momentu powstania naszym główym celem
+									Jesteśmy młodym i dynamicznie rozwijającym się funduszem charytatywnym. <br /><br /> Od momentu powstania naszym główym celem
 									to pomaganie: schroniskom, chorym dzieciom, ludziom znajdującym się w
 									trudnej sytuacji życiowej.
 								</ContentText>

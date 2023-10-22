@@ -4,7 +4,7 @@ import CrossImage  from "../../static/img/dog-image.svg";
 
 export const GeneralSectionContainer = styled.div` 
 height: calc(100% - 74px);
-width: 100%;
+width: 100%; 
 display: flex;
 justify-content: center;
 align-items: center;
@@ -28,11 +28,14 @@ justify-content: space-between;
 
 export const Title = styled.p`
 	color: #FFF;
-font-family: Inter;
-font-size: 64px;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
+  font-family: Inter;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: #02C6CC;
+  max-width: 940px;
+  padding: 5px;
 `
 
 export const SubTitle = styled.p`

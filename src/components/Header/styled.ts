@@ -5,7 +5,7 @@ width: 100%;
 height: 74px;
 background-color: #E71649;
 position: relative;
-z-index: 1;
+z-index: 99;
 display: flex;
 align-items: center;
 justify-content: space-between;

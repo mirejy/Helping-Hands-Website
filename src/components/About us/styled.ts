@@ -4,16 +4,18 @@ const Flex = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-`
+`;
 
-export const AboutUsContainer = styled.div `
-	width: 100%;
-	min-height: 930px;
-	height: max-content; 
-	display: flex;
-	justify-content: center;
-	align-items: start;
-	padding: 63px 0px;
+const defaultText = styled.p` 
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+`;
+ 
+export const TitleAboutUs = styled(defaultText)`
+	color: #FFF;
+	font-size: 64px;
 `;
 
 export const BlockTitleAboutUs = styled(Flex)`
@@ -58,6 +60,15 @@ export const WrapperAboutUs = styled.div`
 	height: 100%; 
 `;
 
+export const AboutUsContainer = styled.div `
+	width: 100%;
+	min-height: 930px;
+	height: max-content; 
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	padding: 63px 0px;
+`;
 
 export const HeaderBlockContainer = styled.div`
 	width:  100%; 
@@ -116,6 +127,7 @@ export const WhoWeHelpBlock = styled.div`
     flex-direction: column; 
 	border-radius: 5px;
 	background: #FCD11F;
+	padding: 0px 0px 25px 0px;
 `;
 
 export const BlockWelcome = styled.div`
@@ -126,6 +138,7 @@ export const BlockWelcome = styled.div`
     flex-direction: column; 
 	border-radius: 5px;
 	background: #02C6CC;
+	padding: 0px 0px 25px 0px;
 `;
 
 export const HowYouCanHelp = styled.div`
@@ -136,23 +149,12 @@ export const HowYouCanHelp = styled.div`
     flex-direction: column; 
 	border-radius: 5px;
 	background: #CA2D54;
+	padding: 0px 0px 25px 0px;
 `;
 
 
 export const Header = styled(Flex)`
 	width: 100%;  
-`;
-
-const defaultText = styled.p` 
-	font-family: Inter;
-	font-style: normal;
-	font-weight: 900;
-	line-height: normal;
-`
-
-export const TitleAboutUs = styled(defaultText)`
-	color: #FFF;
-	font-size: 64px;
 `;
 
 export const TitleWhoWeHelp = styled(defaultText)`
