@@ -5,39 +5,45 @@
 	font-family: 'Inter';
 }
 
-html, body, #root, .App {
-	width: 100%;
-	height: 100%;
-} 
-
 @font-face {
     font-family: 'Inter';
     src: local('Inter-Black'), url('./static/fonts/Inter/Inter-Black.ttf') format('truetype');
 }
 
-&::-webkit-scrollbar {
+html, body, #root, .App {
+	width: 100%;
+	height: 100%;
+}
+
+.App {
+	overflow-x: hidden;
+} 
+
+.App::-webkit-scrollbar {
 	width: 7px;
 	height: 7px;
 }
-&::-webkit-scrollbar-thumb {
+.App::-webkit-scrollbar-thumb {
 	background-color: #c3c5c7;
 	border-radius: 5px;
 	background-clip: padding-box;
 }
-&::-webkit-scrollbar-track {
+.App::-webkit-scrollbar-track {
 	background-color: #f3f6f920;
 }
-&::-webkit-scrollbar-button {
+.App::-webkit-scrollbar-button {
 	height: 100%;
 }
-/* Only IE */
-& {
+
+/* Стили для IE */
+.App {
 	scrollbar-face-color: #c3c5c7;
 	scrollbar-shadow-color: #f3f6f9;
 	scrollbar-highlight-color: #f3f6f9;
 }
-/* Only FireFox */
-& {
+
+/* Стили для FireFox */
+.App {
 	scrollbar-width: thin;
 	scrollbar-color: #c3c5c7 #f3f6f9;
 }

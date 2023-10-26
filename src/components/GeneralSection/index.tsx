@@ -8,7 +8,7 @@ export default function GeneralSection() {
 					<Title>FUNDACJA “HELPING HANDS”</Title>
 					<SubTitle>Pomagamy wszystkim</SubTitle>
 				</BlockText>
-				<Button>CZYTAJ  WIĘCEJ</Button>
+				<Button>Potrzebujesz pomocy?</Button>
 			</ContainerContent>
 		</GeneralSectionContainer>
 	)

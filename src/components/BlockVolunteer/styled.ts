@@ -37,7 +37,7 @@ export const BlockVolunteerContainer = styled.div`
 
 `;
 
-export const BlockVolunteerWrapper = styled.div`
+export const BlockVolunterWrapper = styled.div`
 	display: flex;
     flex-direction: column;
     align-items: center;

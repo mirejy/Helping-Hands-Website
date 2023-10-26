@@ -74,7 +74,7 @@ export const AccordionHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    font-size: 27px;
     padding: 0px 20px;
     cursor: pointer;
     user-select: none; 
