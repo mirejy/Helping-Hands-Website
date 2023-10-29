@@ -12,11 +12,11 @@ function App() {
     <div className="App">
       <Header />
       <GeneralSection />
-      <AboutUs />
+      <AboutUs id="AboutUs" />
       <BlockVolunteer />
       <NeedHelp />
       <Mission />
-      <Footer />
+      <Footer id="Contacts" />
     </div>
   );
 }

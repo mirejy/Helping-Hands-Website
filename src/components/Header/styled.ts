@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-width: 100%;
-height: 74px;
-background-color: #E71649;
-position: relative;
-z-index: 99;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0 30px;
+	width: 100%;
+	height: 74px;
+	background-color: #E71649;
+	position: relative;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 30px;
 
 	@media screen and (max-width: 425px){ 
 	 	padding: 0 20px; 
@@ -53,31 +53,69 @@ export const Logo = styled.p`
 		font-size: 20px;
 	}
 `;
-  
-export const BurgerMenu = styled.div<{ open: boolean }>`
-	width: 26px;
-	height: 3px;
-	background-color: ${({ open }) => (open ? 'transparent' : '#333')};
+
+export const BurgerWrapper = styled.div<{ open: boolean }>`
+	width: 30px;
+	height: 20px;
 	position: relative;
-	transition: background-color 0.3s;
+	cursor: pointer; 
+	transition: all 0.3s;
+	top: ${({ open }) =>
+	    open ? '8px' : 'none'};
+	left: ${({ open }) =>
+	    open ? '8px' : 'none'};
+`;
 
-	::before,
-	::after {
-	  content: '';
-	  position: absolute;
-	  width: 100%;
-	  height: 3px;
-	  background-color: #333;
-	  transition: transform 0.3s;
+export const MenuLinks = styled.div<{ open: boolean }>`
+	width: 100%; 
+	display: flex;
+	opacity: ${({ open }) =>
+	    open ? '1' : '0'};
+	position: absolute;
+	background: #fcd11f;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	top: 74px; 
+	transition: all 0.2s;	
+
+	@media screen and (max-width: 425px){  
+		top: 53px;
 	}
 
-	::before { 
-	  top: ${({ open }) => (open ? '0' : '-8px')};
-	  transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
-	}
+	min-height: ${({ open }) =>
+	    open ? '186px' : '0px'};
+	height: ${({ open }) =>
+	    open ? 'max-content' : '0px'};
+`;
 
-	::after {
-	  bottom: ${({ open }) => (open ? '0' : '-8px')};
-	  transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+export const Line = styled.div<{ open: boolean }>`
+	width: 100%;
+	height: 3px;
+	background-color: #000;
+	position: absolute;
+	left: 0;
+	transition: all 0.3s;	
+
+	&:nth-child(1) {
+	  top: ${({ open }) =>
+	    open ? '-16px' : '0px'};
+	  transform: ${({ open }) =>
+	    open ? 'rotate(45deg) translateY(10px)' : 'none'};
+	  transform-origin: left center;
+	}	
+
+	&:nth-child(2) {
+	  top: 50%;
+	  transform: translateY(-50%);
+	  opacity: ${({ open }) => (open ? '0' : '1')};
+	}	
+
+	&:nth-child(3) {
+	  bottom: ${({ open }) =>
+	    open ? '-2px' : '0px'};
+	  transform: ${({ open }) =>
+	    open ? 'rotate(-45deg) translateY(-10px)' : 'none'};
+	  transform-origin: left center;
 	}
-`; 
+`;

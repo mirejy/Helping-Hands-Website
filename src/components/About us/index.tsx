@@ -23,9 +23,13 @@ import {
 	HelpingLi
 } from "./styled"
 
-export default function AboutUs() {
+interface Props {
+	id?: string;
+}
+
+export default function AboutUs({ id }: Props) {
 	return (
-		<AboutUsContainer>
+		<AboutUsContainer id={id}>
 			<WrapperAboutUs>
 
 				<Header>

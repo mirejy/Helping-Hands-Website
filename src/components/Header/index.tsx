@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HeaderContainer, Logo, BurgerMenu } from "./styled";
+import { HeaderContainer, Logo, BurgerWrapper, Line, MenuLinks } from "./styled";
 import NavigationBar from "../NavigationBar";
 
 export default function Header() {
@@ -30,8 +30,17 @@ export default function Header() {
 		<HeaderContainer ref={refHeader}>
 			<Logo>Helping Hands</Logo>
 			{matchesTable ?
-				<BurgerMenu open={isMenuOpen} onClick={() => { setMenuOpen(!isMenuOpen) }} /> :
-				<NavigationBar />
+				<>
+					<BurgerWrapper open={isMenuOpen} onClick={() => setMenuOpen(!isMenuOpen)}>
+						<Line open={isMenuOpen} />
+						<Line open={isMenuOpen} />
+						<Line open={isMenuOpen} />
+					</BurgerWrapper>
+					<MenuLinks open={isMenuOpen}>
+						<NavigationBar open={isMenuOpen} />
+					</MenuLinks>
+				</> :
+				<NavigationBar open={isMenuOpen} />
 			}
 		</HeaderContainer>
 	);

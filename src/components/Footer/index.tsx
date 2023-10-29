@@ -10,9 +10,13 @@ import {
 	InstagramIcon
 } from "./styled"
 
-export default function Footer() {
+interface Props {
+	id?: string;
+}
+
+export default function Footer({ id }: Props) {
 	return (
-		<BlockFooterContainer>
+		<BlockFooterContainer id={id}>
 			<BlockFooterWrapper>
 				<BlockInformation>
 					<Title>Informacje rejestrowe</Title>
@@ -44,7 +48,9 @@ export default function Footer() {
 				</BlockInformation>
 			</BlockFooterWrapper>
 			<SocialMedia>
-				<FacebookIcon />
+				<a href="https://www.facebook.com/profile.php?id=100094358209624">
+					<FacebookIcon />
+				</a>
 				<a href="https://www.instagram.com/fundacja_helpinghands/">
 					<InstagramIcon />
 				</a>
