@@ -14,7 +14,7 @@ function App() {
       <GeneralSection />
       <AboutUs id="AboutUs" />
       <BlockVolunteer />
-      <NeedHelp />
+      <NeedHelp id="NeedHelp" />
       <Mission />
       <Footer id="Contacts" />
     </div>

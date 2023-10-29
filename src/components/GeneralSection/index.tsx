@@ -1,3 +1,4 @@
+import AnchorLink from "../AnchorLink"
 import { GeneralSectionContainer, BlockText, Title, SubTitle, Button, ContainerContent } from "./styled"
 
 export default function GeneralSection() {
@@ -8,7 +9,7 @@ export default function GeneralSection() {
 					<Title>FUNDACJA “HELPING HANDS”</Title>
 					<SubTitle>Pomagamy wszystkim</SubTitle>
 				</BlockText>
-				<Button>Potrzebujesz pomocy?</Button>
+				<AnchorLink targetId="NeedHelp"><Button>Potrzebujesz pomocy?</Button></AnchorLink>
 			</ContainerContent>
 		</GeneralSectionContainer>
 	)

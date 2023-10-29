@@ -13,10 +13,14 @@ import {
 	ArrowDownIcon
 } from "./styled"
 
-export default function NeedHelp() {
+interface Props {
+	id: string;
+}
+
+export default function NeedHelp({ id }: Props) {
 	const [accordion, setAccordion] = useState("Accordion1")
 	return (
-		<NeedHelpContainer>
+		<NeedHelpContainer id={id}>
 			<BlockTitleAboutUs>
 				<TitleAboutUs>Potrzebujesz pomocy?</TitleAboutUs>
 			</BlockTitleAboutUs>
