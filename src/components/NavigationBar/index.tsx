@@ -1,12 +1,17 @@
+import AnchorLink from "../AnchorLink";
 import { NavContainer, Links, UlNavigation } from "./styled"
+interface Props {
+	open: boolean;
+}
 
-export default function NavigationBar() {
+export default function NavigationBar({ open }: Props) {
+
 	return (
 		<NavContainer>
-			<UlNavigation>
-				<li><Links>O nas</Links></li>
-				<li><Links>Statut</Links></li>
-				<li><Links>Kontakty</Links></li>
+			<UlNavigation open={open}>
+				<li><AnchorLink targetId="AboutUs"><Links>O nas</Links></AnchorLink></li>
+				<li><Links href="./Statut.pdf" download>Statut</Links></li>
+				<li><AnchorLink targetId="Contacts"><Links>Kontakty</Links></AnchorLink></li>
 			</UlNavigation>
 		</NavContainer>
 	)

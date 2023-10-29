@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
+const tablet = "1000px";
+
 export const NavContainer = styled.div` 
-height: 100%;  
-display: flex;
-align-items: center;
-width: 38%;
+	height: 100%;  
+	display: flex;
+	align-items: center;
+	width: 38%;
 `
 
 export const Links = styled.a`
@@ -15,12 +17,25 @@ export const Links = styled.a`
 		cursor: pointer;
 		opacity: 0.6;
 	}
+	@media screen and (max-width: ${tablet}){ 
+		font-size: 20px;
+	}
 `
 
-export const UlNavigation = styled.ul` 
-display: flex;
-gap: 83px;width: 100%;
-    justify-content: space-around;
-list-style-type: none;
-padding-left: 0;
+export const UlNavigation = styled.ul<{open: boolean}>` 
+	display: flex;
+	gap: 5%;
+	width: 100%;
+	justify-content: space-around;
+	list-style-type: none;
+	padding-left: 0;
+
+	${({ open }) =>
+	    open ? 
+		`
+		flex-direction: column;
+		gap: 27px;
+		align-items: center;
+		` : ''};
+	
 `
