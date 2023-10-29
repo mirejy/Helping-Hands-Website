@@ -1,4 +1,8 @@
 import styled from "styled-components";
+ 
+const mobile = "600px";
+const tablet = "800px";
+const miniLaptop = "1100px";
 
 export const BlockVolunteerContainer = styled.div`
 	width: 100%;
@@ -85,14 +89,49 @@ export const Title = styled(defaultText)`
 	font-size: 46px; 
 	background-color:  #00a6b7;
 	padding: 4px;
+
+	@media screen and (max-width: ${mobile}){  
+    	font-size: 26px;
+  	}
+
+	@media screen and (max-width: ${tablet}) and (min-width: ${mobile}){  
+    	font-size: 36px;
+  	}
 `;
 
 export const SubTitle = styled(defaultText)` 
 	font-size: 24px; 
 	width: 73%;
+
+	@media screen and (max-width: ${mobile}){  
+    	font-size: 18px;
+  	}
+
+	@media screen and (max-width: ${tablet}) and (min-width: ${mobile}){  
+    	font-size: 21px;
+  	}
 `;
 
 export const BlackSubtitle = styled(defaultText)`
 	color: #000 !important;
 	font-size: 24px; 
+
+	@media screen and (max-width: ${mobile}){  
+    	width: 290px;
+    	font-size: 15px;
+  	}
+
+	@media screen and (max-width: ${tablet}) and (min-width: ${mobile}){   
+		width: 348px;
+		font-size: 18px;
+  	}
+
+	@media screen and (max-width: 320px){  
+    	width: 185px;
+    	font-size: 13px;
+  	}
+	  
+	@media screen and (max-width: ${miniLaptop}) and (min-width: ${tablet}){   
+		width: 552px;
+  	}
 `;

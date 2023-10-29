@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import {ReactComponent as Founder} from "../../static/img/Image-founder.svg"
 import Quote from "../../static/icon/quote-icon.svg" 
+ 
+const mobile = "870px";
 
 export const ImageFounder = styled(Founder)`
 	width: 160px;
@@ -16,6 +18,11 @@ export const BlockText = styled.div`
     justify-content: space-around;  
 	position: relative;
 
+	@media screen and (max-width: ${mobile}){  
+		height: 30%;
+    	gap: 25%;
+  	} 
+
 	&::before {
 		content: "";
     	position: absolute;
@@ -25,6 +32,11 @@ export const BlockText = styled.div`
     	height: 35px; 
 		background: url(${Quote});
     	background-position: center;
+
+		@media screen and (max-width: ${mobile}){  
+			left: -34px;
+   			top: -5px;
+  		} 
 	}
 	&::after {
 		content: "";
@@ -36,7 +48,12 @@ export const BlockText = styled.div`
     	width: 47px;
     	height: 35px; 
     	background-position: center;
-	}
+
+		@media screen and (max-width: ${mobile}){  
+			bottom: -106px;
+    		right: -42px;
+  		} 
+	}    
 `;
 
 export const BlockMissionContainer = styled.div`
@@ -50,6 +67,10 @@ export const BlockMissionContainer = styled.div`
 	position: relative;  
 	z-index:  1;
 	padding: 63px 0px;
+
+	@media screen and (max-width: ${mobile}){  
+		height: 768px;
+  	}
 
 	&::before {
 		content: "";
@@ -84,6 +105,13 @@ export const BlockMissionWrapper = styled.div`
 	width: 76%;
 	height: 50%;
     justify-content: space-around; 
+
+	@media screen and (max-width: ${mobile}){  
+		flex-direction: column-reverse;
+    	width: 100%;
+    	height: 100%;
+  	}
+
 `;
 
 export const BlockTitleFounder = styled.div`
@@ -96,6 +124,10 @@ export const BlockTitleFounder = styled.div`
     height: 50%;
     left: 44px;
     justify-content: space-around;
+
+	@media screen and (max-width: ${mobile}){  
+		left: unset;
+  	}
 `;
 
 export const BlockFounderImage = styled.div` 

@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+
+const mobile = "810px";
+
 const Flex = styled.div` 
 	display: flex;
 	justify-content: center;
@@ -16,14 +19,23 @@ const defaultText = styled.p`
 export const TitleAboutUs = styled(defaultText)`
 	color: #FFF;
 	font-size: 64px;
+
+	@media screen and (max-width: ${mobile}){  
+    	font-size: 43px;
+  	}
 `;
 
 export const BlockTitleAboutUs = styled(Flex)`
 	width: 440px;
-	min-height: 155px; 
+	height: 155px; 
 	background-color: #E71649;
 	border-radius: 5px; 
 	position: relative; 
+
+	@media screen and (max-width: ${mobile}){  
+    	width: 241px;
+    	height: 106px;
+  	}
 
 	&::before {
 		content: "";
@@ -51,6 +63,11 @@ export const BlockTitleAboutUs = styled(Flex)`
     	top: 12%;
     	left: 25%;
     	z-index: 2; 
+		
+		@media screen and (max-width: ${mobile}){  
+			top: 10%;
+    		left: 18%;
+  		}
     }
 
 `; 
@@ -58,12 +75,14 @@ export const BlockTitleAboutUs = styled(Flex)`
 export const WrapperAboutUs = styled.div`
 	width:  80%;
 	height: 100%; 
+
+	@media screen and (max-width: ${mobile}){  
+		width: 100%;
+	}
 `;
 
 export const AboutUsContainer = styled.div `
-	width: 100%;
-	min-height: 930px;
-	height: max-content; 
+	width: 100%; 
 	display: flex;
 	justify-content: center;
 	align-items: start;
@@ -103,31 +122,43 @@ export const HelpingLi = styled.li`
 `;
 
 export const Content = styled.div`
-	width:  100%;    
-    height: 654px;
+	width:  100%;     
     margin-top: 73px;
 	display: flex;
 	gap: 33px;
+
+	@media screen and (max-width: ${mobile}){   
+    	gap: 17px;
+		height: unset;
+		flex-direction: column-reverse;
+  	 }
 `;
 
 export const ContainerSmallBlocks = styled.div`
-	width:  50%;   
-	height: 100%;
+	width:  50%;    
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 53px;
+
+	@media screen and (max-width: ${mobile}){  
+		width: 100%;
+		gap: 17px;
+	}
 `;
 
 export const WhoWeHelpBlock = styled.div`
-	width:  50%;  
-	height: 100%;
+	width:  50%;   
 	display: flex;
     align-items: center;
     flex-direction: column; 
 	border-radius: 5px;
 	background: #FCD11F;
 	padding: 0px 0px 25px 0px;
+
+	@media screen and (max-width: ${mobile}){  
+		width:  100%;  
+   	}
 `;
 
 export const BlockWelcome = styled.div`
@@ -161,6 +192,10 @@ export const TitleWhoWeHelp = styled(defaultText)`
 	color: #222;
 	text-align: center; 
 	font-size: 46px;
+
+	@media screen and (max-width: ${mobile}){  
+		font-size: 32px;
+   	}
 `;
 
 export const TitleBlock = styled(defaultText)`
@@ -177,4 +212,8 @@ export const ContentText = styled(defaultText)`
 export const ContentWhoWeHelp = styled(defaultText)`
 	color: #212121;
 	font-size: 20px;
+
+	@media screen and (max-width: ${mobile}){  
+		font-size: 17px;
+   	}
 `;

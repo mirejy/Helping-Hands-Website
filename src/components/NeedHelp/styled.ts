@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import {ReactComponent as ArrowDown} from "../../static/icon/arrow-down.svg"
+ 
+const mobile = "600px";
 
 export const ArrowDownIcon = styled(ArrowDown)<{accordion: boolean}>` 
 	width: 21px;
 	height: 31px;
 	transform: ${({accordion}) => (accordion ? "" : "rotate(180deg)")}; 
 	transition: all 200ms;
+    min-width: 21px;
+	min-height: 31px; 
 `;
 
 export const NeedHelpContainer = styled.div`
@@ -78,6 +82,11 @@ export const AccordionHeader = styled.div`
     padding: 0px 20px;
     cursor: pointer;
     user-select: none; 
+
+	@media screen and (max-width: ${mobile}){  
+    	font-size: 18px;
+  	}
+
 `;
 
 export const AccordionContent = styled.div<{accordion: boolean}>`
@@ -93,6 +102,14 @@ export const AccordionContent = styled.div<{accordion: boolean}>`
 	opacity: 0;
     padding: 0;
     font-size: 18px;
+
+	@media screen and (max-width: ${mobile}){  
+		font-size: 14px;
+    	padding: 10px 24px !important; 
+		${({accordion}) => (accordion ? `
+			height: 130px !important; 
+	` : "")}; 
+  	} 
 `;
 
 const defaultText = styled.p` 
@@ -107,19 +124,44 @@ export const SubTitle = styled(defaultText)`
 	color: #FFF; 
 	text-align: center; 
 	font-size: 26px;   
+
+	@media screen and (max-width: ${mobile}){ 
+		font-size: 21px;
+  	}
+	@media screen and (max-width: 320px){  
+		font-size: 19px;
+	}
 `;
 
 export const TitleAboutUs = styled(defaultText)`
-	color: #FFF;
-	font-size: 45px;
+	color: #FFF; 
+		font-size: 37px;
+
+	@media screen and (max-width: ${mobile}){ 
+ 		font-size: 34px;
+  	}
+
+	@media screen and (max-width: 350px){  
+		font-size: 30px;
+	} 
 `;
 
 export const BlockTitleAboutUs = styled(Flex)`
-	width: 800px;
+	width: 39vw;
 	min-height: 155px; 
 	background-color: #E71649;
 	border-radius: 5px; 
 	position: relative; 
+    min-width: 240px;
+
+	@media screen and (max-width: ${mobile}){ 
+		width: 300px; 
+    	min-height: 112px;
+  	}
+
+	@media screen and (max-width: 350px){  
+		width: 240px; 
+	}
 
 	&::before {
 		content: "";
@@ -131,6 +173,7 @@ export const BlockTitleAboutUs = styled(Flex)`
     	left: 5%;
 		border-radius: 5px; 
 	}
+
 	&::after {
 		content: "";
 		width: 100%;
@@ -141,12 +184,23 @@ export const BlockTitleAboutUs = styled(Flex)`
     	left: -9%;
 		border-radius: 5px; 
 	}
+
 	span::after {
 		content: "Potrzebujesz pomocy?";
-    position: absolute;
-    top: 25%;
-    left: 15%;
-    z-index: 2;
-    }
+    	position: absolute;
+    	top: 25%;
+    	left: 8%;
+    	z-index: 2;
+
+		@media screen and (max-width: ${mobile}){ 
+			top: 7%;
+    		left: 11%;
+  		}
+
+		@media screen and (max-width: 350px){  
+			top: 5%;
+			left: 4%;
+		}
+  }
 
 `; 

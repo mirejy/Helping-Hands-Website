@@ -11,6 +11,11 @@ align-items: center;
 justify-content: space-between;
 padding: 0 30px;
 
+	@media screen and (max-width: 425px){ 
+	 	padding: 0 20px; 
+		height: 53px;
+	}
+
 &::before {
 	content: "";
 	position: absolute;
@@ -39,4 +44,29 @@ export const Logo = styled.p`
 	font-size: 24px;
 	font-family: 'Inter';
 	color: #FFFFFF; 
-`
+	
+	@media screen and (max-width: 600px){ 
+		width: 100px; 
+	}
+
+	@media screen and (max-width: 425px){  
+		font-size: 20px;
+	}
+`;
+
+export const BurgerMenu = styled.div` 
+	width: 26px;
+	height: 20px;
+	display: flex;
+	cursor: pointer;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+`;
+
+export const BurgerLine = styled.div` 
+	width: 100%;
+	height: 3px;
+	border-radius: 2px;
+	background-color: #000000;
+`;
