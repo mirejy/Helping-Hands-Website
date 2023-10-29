@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HeaderContainer, Logo, BurgerMenu, BurgerLine } from "./styled";
+import { HeaderContainer, Logo, BurgerMenu } from "./styled";
 import NavigationBar from "../NavigationBar";
 
 export default function Header() {
 	const [matchesTable, setMatchesTable] = useState(false);
 	const refHeader = useRef<HTMLDivElement | null>(null);
+	const [isMenuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const updateMatchesTable = () => {
@@ -29,11 +30,7 @@ export default function Header() {
 		<HeaderContainer ref={refHeader}>
 			<Logo>Helping Hands</Logo>
 			{matchesTable ?
-				<BurgerMenu>
-					<BurgerLine></BurgerLine>
-					<BurgerLine></BurgerLine>
-					<BurgerLine></BurgerLine>
-				</BurgerMenu> :
+				<BurgerMenu open={isMenuOpen} onClick={() => { setMenuOpen(!isMenuOpen) }} /> :
 				<NavigationBar />
 			}
 		</HeaderContainer>

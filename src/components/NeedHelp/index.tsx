@@ -17,11 +17,9 @@ export default function NeedHelp() {
 	const [accordion, setAccordion] = useState("Accordion1")
 	return (
 		<NeedHelpContainer>
-			<TitleAboutUs>
-				<BlockTitleAboutUs>
-					<span></span>
-				</BlockTitleAboutUs>
-			</TitleAboutUs>
+			<BlockTitleAboutUs>
+				<TitleAboutUs>Potrzebujesz pomocy?</TitleAboutUs>
+			</BlockTitleAboutUs>
 			<BlockSubtitle>
 				<SubTitle>Jeśli ty lub ktoś z twoich bliskich potrzebuje wsparcia, nasza fundacja charytatywna jest gotowa pomóc</SubTitle>
 			</BlockSubtitle>

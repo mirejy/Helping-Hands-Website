@@ -135,12 +135,12 @@ export const SubTitle = styled(defaultText)`
 
 export const TitleAboutUs = styled(defaultText)`
 	color: #FFF; 
-		font-size: 37px;
+		font-size: 33px;
 
 	@media screen and (max-width: ${mobile}){ 
  		font-size: 34px;
-  	}
-
+  	} 
+	
 	@media screen and (max-width: 350px){  
 		font-size: 30px;
 	} 
@@ -153,7 +153,7 @@ export const BlockTitleAboutUs = styled(Flex)`
 	border-radius: 5px; 
 	position: relative; 
     min-width: 240px;
-
+	text-align: center;
 	@media screen and (max-width: ${mobile}){ 
 		width: 300px; 
     	min-height: 112px;
@@ -161,46 +161,18 @@ export const BlockTitleAboutUs = styled(Flex)`
 
 	@media screen and (max-width: 350px){  
 		width: 240px; 
-	}
-
-	&::before {
-		content: "";
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		background-color: #FCDA50;
-		top: 16%;
-    	left: 5%;
-		border-radius: 5px; 
-	}
+	} 
 
 	&::after {
 		content: "";
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		background-color: #02C6CC;
+		background-color: #FCD11F;
 		top: -11%;
     	left: -9%;
 		border-radius: 5px; 
-	}
-
-	span::after {
-		content: "Potrzebujesz pomocy?";
-    	position: absolute;
-    	top: 25%;
-    	left: 8%;
-    	z-index: 2;
-
-		@media screen and (max-width: ${mobile}){ 
-			top: 7%;
-    		left: 11%;
-  		}
-
-		@media screen and (max-width: 350px){  
-			top: 5%;
-			left: 4%;
-		}
-  }
+		z-index: -2;
+	} 
 
 `; 

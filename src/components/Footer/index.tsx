@@ -45,7 +45,9 @@ export default function Footer() {
 			</BlockFooterWrapper>
 			<SocialMedia>
 				<FacebookIcon />
-				<InstagramIcon />
+				<a href="https://www.instagram.com/fundacja_helpinghands/">
+					<InstagramIcon />
+				</a>
 			</SocialMedia>
 		</BlockFooterContainer>
 	)

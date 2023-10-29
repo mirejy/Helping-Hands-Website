@@ -53,20 +53,31 @@ export const Logo = styled.p`
 		font-size: 20px;
 	}
 `;
-
-export const BurgerMenu = styled.div` 
+  
+export const BurgerMenu = styled.div<{ open: boolean }>`
 	width: 26px;
-	height: 20px;
-	display: flex;
-	cursor: pointer;
-	flex-direction: column;
-	align-items: center;
-	gap: 5px;
-`;
-
-export const BurgerLine = styled.div` 
-	width: 100%;
 	height: 3px;
-	border-radius: 2px;
-	background-color: #000000;
-`;
+	background-color: ${({ open }) => (open ? 'transparent' : '#333')};
+	position: relative;
+	transition: background-color 0.3s;
+
+	::before,
+	::after {
+	  content: '';
+	  position: absolute;
+	  width: 100%;
+	  height: 3px;
+	  background-color: #333;
+	  transition: transform 0.3s;
+	}
+
+	::before { 
+	  top: ${({ open }) => (open ? '0' : '-8px')};
+	  transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+	}
+
+	::after {
+	  bottom: ${({ open }) => (open ? '0' : '-8px')};
+	  transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+	}
+`; 

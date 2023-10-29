@@ -9,11 +9,13 @@ const tablet = "860px";
 export const InstagramIcon = styled(Instagram)`
 	min-width: 56px;
 	min-height: 56px;
+    cursor: pointer;
 `;
 
 export const FacebookIcon = styled(Facebook)`
 	min-width: 56px;
 	min-height: 56px;
+    cursor: pointer;
 `;
 
 export const SocialMedia = styled.div`
