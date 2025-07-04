@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CrossImage  from "../../static/img/dog-image.svg";
+import CrossImage from "../../static/img/dog-image.svg";
 
 const mobile = "500px";
 
@@ -17,6 +17,7 @@ export const GeneralSectionContainer = styled.div`
   -o-background-size: cover;
   background-size: cover;
   background-image: url(${CrossImage}); 
+  position: relative;
 `
 
 export const ContainerContent = styled.div` 
